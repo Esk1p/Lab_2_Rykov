@@ -79,17 +79,7 @@ public class TyanMove : MonoBehaviour
 
     void Start()
     {
-        Invoke("DropTaddy", 2f);
     }
-    
-    // Функция для сбрасывания подарков
-    void DropTaddy(){
-        Vector3 myVector = new Vector3(0.0f,0.0f,0.0f);
-        GameObject taddy = Instantiate<GameObject>(taddyPrefab);
-        taddy.transform.position = transform.position + myVector;
-        Invoke("DropTaddy", 2f);
-    }
-    
 
     void Update()
     {

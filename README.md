@@ -227,6 +227,50 @@ public class TyanPicker : MonoBehaviour
 ## Задание 2
 ### В проект, выполненный в предыдущем задании, добавить систему проверки того, что SDK подключен (доступен в режиме онлайн и отвечает на запросы);
 
+1) В Build Settings переключем нашу игру на платформу WebGL, затем забилдим наш проект, чтобы создать файл index.html;
+2) Добавляем в index.html следующие строки
+```html
+<head>
+<script src="https://yandex.ru/games/sdk/v2"></script>
+
+    <script>
+      YaGames.init().then(ysdk => {
+          ysdk.adv.showFullscreenAdv();
+
+          const buttonElem = document.querySelector('#button');
+
+          let commonCounter = 0;
+          buttonElem.addEventListener('click', () => {
+              let counter = 0;
+
+              function getCallback(callbackName) {
+                  return () => {
+                      counter += 1;
+                      commonCounter += 1;
+
+                      console.log(`showFullscreenAdv; callback ${callbackName}; ${counter} call`);
+                  }
+              }
+
+              ysdk.adv.showFullscreenAdv({
+                  callbacks: {
+                      onClose: getCallback('onClose'),
+                      onOpen: getCallback('onOpen'),
+                      onError: getCallback('onError'),
+                      onOffline: getCallback('onOffline')
+                  }
+              });
+          });
+      });
+  </script>
+  </head>
+
+  <body>
+      <button id="button">Показать рекламу</button>
+  </body>
+      
+```
+
 
 
 

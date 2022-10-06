@@ -117,6 +117,9 @@ public class TyanMove : MonoBehaviour
 
 }
 ```
+В результате выполнения данного скрипта мы получаем следующее: 
+![RRMpKvwOHQ](https://user-images.githubusercontent.com/91608946/194362078-89bb0f5a-0e6c-42f5-b161-5bd7fd634b38.gif)
+
 
 
 

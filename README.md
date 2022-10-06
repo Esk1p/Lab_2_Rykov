@@ -267,9 +267,10 @@ public class TyanPicker : MonoBehaviour
 
   <body>
       <button id="button">Показать рекламу</button>
-  </body>
-      
+  </body>  
 ```
+3) В итоге мы "показываем рекламу" с помощью Yandex SDK, однако получаем ошибку, потому что я пока понятию не имею, как его настроить. Тем не менее мы получили систему проверки Yandex SDK, которая доказывает свое существование с помощью ошибки.
+![05D5chhoB4](https://user-images.githubusercontent.com/91608946/194391248-d1621b3e-48cb-417b-915a-6ee06a0aff32.gif)
 
 
 
